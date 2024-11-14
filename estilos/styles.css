@@ -58,10 +58,9 @@ main {
     flex: 1;
 }
 
-main p{
+main > p{
     background-color: #f3b123;
 }
-
 
 /* Pie de página */
 footer {
