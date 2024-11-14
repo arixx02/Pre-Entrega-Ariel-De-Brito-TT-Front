@@ -41,8 +41,10 @@ header {
     background-position-y: center;
     text-align: end;
     background-image: url(../img/Dragon\ ball\ header.jpeg);
-    color: rgb(255, 145, 0);
+    color: rgb(0, 0, 0);
     text-align: center;
+    align-items: center;
+    align-content: center;
 }
 
 /* Secciones principales */
@@ -54,6 +56,10 @@ main {
     padding: 1em 0;
     margin-top: 2em;
     flex: 1;
+}
+
+main p{
+    background-color: #f3b123;
 }
 
 
@@ -76,10 +82,24 @@ h2{
     font-weight: bold;
 }
 
-nav ul {
+header nav ul {
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    background-color: #000000;
+}
+
+header h1{
+    background-color: #f3b123;
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
     list-style-type: none;
     padding: 0;
 }
@@ -89,7 +109,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color:  rgb(0, 0, 0); /* Cambiado a negro */
+    color:  rgb(255, 153, 0); /* Cambiado a negro */
     text-decoration: none;
     font-weight: bold;
 }
@@ -102,6 +122,7 @@ nav ul li a:hover{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 10px;
 }
 
 .tarjeta{
