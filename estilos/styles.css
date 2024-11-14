@@ -1,0 +1,269 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.centrado{
+    margin: 0 auto;
+    padding: 0 1em;
+    justify-content: center;
+}
+
+
+
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    background-color: #f3b123; /* Fondo oscuro, frío */
+    color: #e0e1dd; /* Texto claro */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Sofia Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+header {
+    width: 100%;
+    height: 270px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: cover;
+    background-position-y: center;
+    text-align: end;
+    background-image: url(../img/Dragon\ ball\ header.jpeg);
+    color: rgb(255, 145, 0);
+    text-align: center;
+}
+
+/* Secciones principales */
+main {
+    font-weight: bold;
+    padding: 2em;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    padding: 1em 0;
+    margin-top: 2em;
+    flex: 1;
+}
+
+
+/* Pie de página */
+footer {
+    position: sticky;
+    width:100%;
+    bottom:0;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+    background-color: #e0e1dd98;
+}
+
+h2{
+    justify-content: center;
+    text-align: center;
+    color: #000000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color:  rgb(0, 0, 0); /* Cambiado a negro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    background-color: #f3b123;
+}
+
+.cards{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tarjeta{
+    width: 320px;
+    height: 400px;
+    perspective: 2000px;
+}
+
+.tarjeta-interior{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
+    border-radius: 28px;
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    -ms-border-radius: 28px;
+    -o-border-radius: 28px;
+    transition: all 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+.tarjeta-interior:hover{
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+}
+
+.frente,.dorso{
+    width: 100%;
+    height: 100%;
+    border-radius: 28px;
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    -ms-border-radius: 28px;
+    -o-border-radius: 28px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+}
+
+.frente{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}     
+
+.dorso{
+    color: #000000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.25rem;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding: 32px;
+    background-color: #B1CFC8;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    overflow-x: scroll;
+}
+
+
+.boton{
+    display: block;
+    background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.boton:hover{
+    opacity: 1;
+    background-color: #f3b123;
+}
+
+
+
+/* Reseñas */
+.reseñas-grid {
+    width: 960px;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.reseña {
+    width:360px;
+    background-color: #f4f4f4;
+    padding: 1em;
+    margin: 10px;
+    text-align: center;
+    justify-content: space-evenly;
+    float: left;
+}
+
+@media all and (min-width:600px) and (max-width:1023px){
+    /* Reseñas */
+.reseñas-grid {
+    width: 500px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.reseña {
+    width:166px;
+    background-color: #f4f4f4;
+    padding: 1em;
+    margin: 10px;
+    text-align: center;
+    justify-content: space-evenly;
+    float: left;
+}
+}
+
+.video{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contacto  h2{
+    color: #FFF;
+}
+/* Formulario de contacto */
+form {
+    font-weight: bold;
+    display: grid;
+    grid-row: inherit;
+    max-width: 500px;
+    text-decoration: underline;
+    color: #FFF;
+    box-shadow: #B1CFC8;
+    margin: 0 auto;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+
+form label {
+    margin: 0.5em 0 0.2em;
+}
+
+form input, form textarea, form button {
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+
