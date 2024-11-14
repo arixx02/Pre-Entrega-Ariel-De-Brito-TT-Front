@@ -39,7 +39,6 @@ header {
     background-position-x: center;
     background-size: cover;
     background-position-y: center;
-    text-align: end;
     background-image: url(../img/Dragon\ ball\ header.jpeg);
     color: rgb(0, 0, 0);
     text-align: center;
@@ -84,7 +83,6 @@ h2{
 header nav ul {
     display: flex;
     justify-content: center;
-    justify-content: space-evenly;
     list-style-type: none;
     padding: 0;
     background-color: #000000;
@@ -188,7 +186,7 @@ nav ul li a:hover{
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
-    overflow-x: scroll;
+    overflow-y: scroll;
 }
 
 
