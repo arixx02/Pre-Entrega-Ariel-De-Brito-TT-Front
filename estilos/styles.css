@@ -58,7 +58,7 @@ main {
     flex: 1;
 }
 
-main > gip{
+main > p{
     background-color: #f3b123;
 }
 
