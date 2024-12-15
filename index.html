@@ -1,45 +1,69 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Pre-Entrega</title>
-    <link rel="stylesheet" href="estilos/styles.css">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/476d9e1058.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body style="background-image: url(img/casa\ kame.jpg);">
-    <header>
-        <h1><u>INICIO</u></h1>
-        <nav>
-            <ul>
-                <li>Inicio</li>
-                <li><a href="paginas/productos.html">Productos</a></li>
-                <li><a href="paginas/contacto.html">Contacto</a></li>
-                <li><a href="paginas/reseñas.html">Reseñas</a></li>
+    <div class="container-fluid">
+        <header class="d-flex flex-wrap justify-content-between py-3 mb-4 border-bottom">
+            <div
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none mx-0 px-0">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+                <span class="fs-4">INICIO</span>
+            </div>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="paginas/productos.html" class="nav-link">Productos</a></li>
+                <li class="nav-item"><a href="paginas/Contacto.html" class="nav-link">Contacto</a></li>
+                <li class="nav-item"><a href="paginas/Reseñas.html" class="nav-link">Reseñas</a></li>
             </ul>
-        </nav>
-    </header>
-    <main >
-        <h2></h2>
-        <p>La serie Dragon Ball Z: Budokai es una serie de juegos de lucha basados ​​en la serie Dragon Ball y
-        desarrollados por Dimps para PlayStation 2, GameCube, PlayStation Portable, PlayStation 3 y Xbox 360. La serie
-        debutó en 2002 y consta de Dragon Ball Z: Budokai (2002; PS2, 2003; GameCube), Dragon Ball Z: Budokai 2 (2003;
-        PS2, GameCube), Dragon Ball Z 2 V (actualización especial de Budokai 2 ; PS2), Dragon Ball Z: Budokai 3 (2004;
-        PS2), Dragon Ball Z: Shin Budokai (2006; PSP), Dragon Ball Z: Shin Budokai - Another Road (2007; PSP), Dragon
-        Ball Z: Burst Limit (2008; PS3, Xbox 360), Dragon Ball Z: Infinite World (2008; PS2), Dragonball Evolution: The
-        Game (2009; PSP) y Dragon Ball Z: Infinite World (2008; PS2). Colección Z: Budokai HD (2012; PS3, Xbox 360).
-        </p>
-        <div class="centrado">
-            <section class="video">
-                <iframe width="649" height="365" src="https://www.youtube.com/embed/NVACB6kEpGA" title="Dragon Ball Z: Budokai - 2002 PS2 Trailer [High Quality]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </section>
+        </header>
+    </div>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="centrado">
+                        <section class="video">
+                            <iframe width="649" height="365" src="https://www.youtube.com/embed/NVACB6kEpGA" title="Dragon Ball Z: Budokai - 2002 PS2 Trailer [High Quality]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <p>La serie Dragon Ball Z: Budokai es una serie de juegos de lucha basados ​​en la serie Dragon Ball y
+                        desarrollados por Dimps para PlayStation 2, GameCube, PlayStation Portable, PlayStation 3 y Xbox 360. La serie
+                        debutó en 2002 y consta de Dragon Ball Z: Budokai (2002; PS2, 2003; GameCube), Dragon Ball Z: Budokai 2 (2003;
+                        PS2, GameCube), Dragon Ball Z 2 V (actualización especial de Budokai 2 ; PS2), Dragon Ball Z: Budokai 3 (2004;
+                        PS2), Dragon Ball Z: Shin Budokai (2006; PSP), Dragon Ball Z: Shin Budokai - Another Road (2007; PSP), Dragon
+                        Ball Z: Burst Limit (2008; PS3, Xbox 360), Dragon Ball Z: Infinite World (2008; PS2), Dragonball Evolution: The
+                        Game (2009; PSP) y Dragon Ball Z: Infinite World (2008; PS2). Colección Z: Budokai HD (2012; PS3, Xbox 360).
+                        </p>
+                </div>
+            </div>
         </div>
+        <!--<p id="text">This is some text.</p>
+    <button id="changeTextBtn">Click me to change text!</button>
+    -->
     </main>
+    <!--
+    <script>
+        //alert("Hola comision 24232")
+        console.log("Hola comision 24232")
+    </script>
+-->
+    
     <footer>
         <p>&copy; 2024 De Brito, Ariel. All rights reserved.</p>
         <nav>
@@ -50,6 +74,10 @@
             </ul>
         </nav>
     </footer>
+    <script src="https://kit.fontawesome.com/476d9e1058.js" crossorigin="anonymous"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
