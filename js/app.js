@@ -59,6 +59,34 @@ const IVA = 0.21;  // 21% de IVA
 // Inicializar el carrito al cargar la página
 document.addEventListener('DOMContentLoaded', cargarCarrito);
 
+ const footerHtml=`
+<p>&copy; 2024 De Brito, Ariel. All rights reserved.</p>
+		<nav>
+			<ul>
+				<li><i class="fa-brands fa-facebook"></i></li>
+				<li><i class="fa-brands fa-github"></i></li>
+				<li><i class="fa-brands fa-instagram"></i></li>
+			</ul>
+		</nav>
+`
+document.getElementById("pie").insertAdjacentHTML('beforeend', footerHtml); 
+/* document.addEventListener("DOMContentLoaded", function() {
+    const footerHtml = `
+        <p>&copy; 2024 De Brito, Ariel. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-github"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+            </ul>
+        </nav>
+    `;
+    const pieElement = document.getElementById("pie");
+    if (pieElement) {
+        pieElement.insertAdjacentHTML('beforeend', footerHtml);
+    }
+}); */
+
 if(document.getElementById(`productos`)){
 
 for(let i=0;i<10;i++){
@@ -83,6 +111,34 @@ for(let i=0;i<10;i++){
     `;
     document.getElementById("cartas").insertAdjacentHTML('beforeend', tarjetaHTML);
 }
+
+const carritoHTML=`
+        <div id="carrito">
+			<h2>Carrito de Compras</h2>
+			<ul id="lista-carrito"></ul>
+			<p>Subtotal: $<span id="subtotal-carrito">0</span></p>
+			<p>Descuento: $<span id="descuento-carrito">0</span></p>
+			<p>IVA (21%): $<span id="iva-carrito">0</span></p>
+			<p><strong>Total: $<span id="total-carrito">0</span></strong></p>
+			<button onclick="vaciarCarrito()">Vaciar Carrito</button>
+			<button onclick="mostrarCheckout()">Checkout</button>
+		</div>
+	
+		<!-- Modal de Checkout -->
+		<div id="checkout-modal">
+			<div class="checkout-content">
+				<h2>Finalizar Compra</h2>
+				<p>Subtotal: $<span id="modal-subtotal">0</span></p>
+				<p>Descuento: $<span id="modal-descuento">0</span></p>
+				<p>IVA: $<span id="modal-iva">0</span></p>
+				<p><strong>Total a Pagar: $<span id="modal-total">0</span></strong></p>
+				<button onclick="realizarCompra()">Confirmar Compra</button>
+				<button onclick="cerrarCheckout()">Cancelar</button>
+			</div>
+		</div>
+`
+document.getElementById("productos").insertAdjacentHTML('beforeend', carritoHTML);
+
 
 function agregarAlCarrito(nombre, precio, productoKey) {
     // Obtener el producto específico
