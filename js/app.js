@@ -1,24 +1,4 @@
-// Configuración de productos con stock y descuentos
-/*    const productos = {
-    laptop: { 
-        nombre: 'Laptop', 
-        precio: 800, 
-        stock: 10,
-        descuento: 0.1  // 10% de descuento
-    },
-    smartphone: { 
-        nombre: 'Smartphone', 
-        precio: 500, 
-        stock: 15,
-        descuento: 0.05  // 5% de descuento
-    },
-    tablet: { 
-        nombre: 'Tablet', 
-        precio: 300, 
-        stock: 8,
-        descuento: 0  // Sin descuento
-    }
-}; */
+
 
 // Datos base para crear productos dinámicamente
 const productosDatos = [
@@ -52,6 +32,8 @@ const IVA = 0.21;  // 21% de IVA
 
 // Inicializar el carrito al cargar la página
 document.addEventListener('DOMContentLoaded', cargarCarrito);
+
+if(document.getElementById(`productos`)){
 
 function agregarAlCarrito(nombre, precio, productoKey) {
     // Obtener el producto específico
@@ -249,6 +231,7 @@ function agregarParrafo(productoKey,event) {
             `<button class="boton"  onclick="agregarParrafo(${productoKey},event)">Descripción</button>`);
     }
 
+}
 }
 
 //Validacion de formulario
