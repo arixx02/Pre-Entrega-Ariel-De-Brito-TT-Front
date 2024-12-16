@@ -25,6 +25,32 @@ const productos = productosDatos.map(product => ({
     descuento: 0
 }));
 
+const imagenesFondo = {
+    1:{frente:"../img/budokai cover.webp" },
+    2:{frente:"../img/budokai 2.webp" },
+    3:{frente:"../img/DBZ2V_Cover.webp"  },
+    4:{frente:"../img/budokai 3.webp"  },
+    5:{frente:"../img/shin budokai.webp"  },
+    6:{frente:"../img/shin budokai 2.webp" },
+    7:{frente:"../img/burst limit.webp" },
+    8:{frente:"../img/infinite world.webp" },
+    9:{frente:"../img/Dragonball_Evolution_PSP_box_art.webp" },
+    10 :{frente:"../img/hd collection.webp" }
+}
+
+const urlInfo=[
+    "https://dragonball.fandom.com/wiki/Dragon_Ball_Z:_Budokai",
+    "https://dragonball.fandom.com/wiki/Dragon_Ball_Z:_Budokai_2",
+    "https://dragonball.fandom.com/wiki/Dragon_Ball_Z_2_V",
+    "https://dragonball.fandom.com/wiki/Dragon_Ball_Z:_Budokai_3",
+    "https://dragonball.fandom.com/wiki/Dragon_Ball_Z:_Shin_Budokai",
+    "https://dragonball.fandom.com/wiki/Dragon_Ball_Z:_Shin_Budokai_-_Another_Road",
+    "https://dragonball.fandom.com/wiki/Dragon_Ball_Z:_Burst_Limit",
+    "https://dragonball.fandom.com/wiki/Dragon_Ball_Z:_Infinite_World",
+    "https://dragonball.fandom.com/wiki/Dragonball_Evolution:_The_Game",
+    "https://dragonball.fandom.com/wiki/Dragon_Ball_Z:_Budokai_HD_Collection"
+];
+
 console.log(JSON.stringify(productos));
 
 // Constante para el IVA
@@ -34,6 +60,29 @@ const IVA = 0.21;  // 21% de IVA
 document.addEventListener('DOMContentLoaded', cargarCarrito);
 
 if(document.getElementById(`productos`)){
+
+for(let i=0;i<10;i++){
+    const tarjetaHTML = `
+    <div class="tarjeta">
+        <div class="tarjeta-interior">
+            <div class="frente" style="background-image: url('${imagenesFondo[i + 1].frente}');"></div>
+            <div class="dorso" id="dorso${i}" style="background-image: url('../img/dragon-ball-png-dragon-balls-png-2700.png');">
+                <button class="boton" onclick="agregarParrafo(${i}, event)">
+                    Descripción
+                </button>
+                <a href="${urlInfo[i]}" target="_blank">
+                    <div class="boton">
+                        Mas Info
+                    </div>
+                </a>
+                <button onclick="agregarAlCarrito('${productos[i].nombre}', ${productos[i].precio}, ${i})">Agregar</button>
+                <span>Stock: <span id="stock-${i}">${productos[i].stock}</span></span>
+            </div>
+        </div>
+    </div>
+    `;
+    document.getElementById("cartas").insertAdjacentHTML('beforeend', tarjetaHTML);
+}
 
 function agregarAlCarrito(nombre, precio, productoKey) {
     // Obtener el producto específico
